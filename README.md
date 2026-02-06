@@ -33,6 +33,6 @@ Welcome to **MyShop**! This repository showcases a fully responsive, modern e-co
 ---
 
 
-## 🧩 Project Structure
+
 
 
