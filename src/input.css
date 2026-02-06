@@ -1,0 +1,190 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@layer utilities{
+
+    .row{
+        @apply w-full flex flex-wrap
+    }
+}
+/* @font-face {
+    font-family: inter;
+    /* src: url(./font/Inter/Inter-VariableFont_opsz\,wght.ttf); */
+ */
+body{
+     font-family: "Inter", sans-serif;
+    background-color: rgba(238, 221, 254, 0.444);
+}
+.blu{
+    backdrop-filter: blur(5px);
+}
+@keyframes anime1{
+    from{
+    translate: 0;
+    }
+    to{
+        translate: calc((-100%));
+    }
+    
+}
+.anime1{
+    animation: anime1 18s linear infinite;
+
+}
+.contain{
+    
+    width: 100%;
+    /* height: 500px; */
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to right top, #181a1c, #24292a, #313838, #424844, #555851);
+    
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    
+    align-items: center;
+    padding-top: 15px;
+    >p:first-of-type{
+        font-size: 23px;
+        /* margin-top: 25px; */
+        font-family: sans-serif;
+        word-spacing: 3px;
+           text-shadow:
+    0 0 2px #d1cdd4,
+    0 0 5px #383738,
+    0 0 5px #59575a,
+    0 0 10px rgb(50, 49, 50);
+    }
+    >p:nth-of-type(2){
+        color: white;
+        margin-top: 10px;
+        font-family: sans-serif;
+    }
+    
+}
+.box{
+    /* width: 300px;
+    height: 350px; */
+    
+     animation: smooth-asymmetric-morph-box 7s infinite linear; 
+    background-color: black;
+    border-radius:62% 38% 53% 57% / 59% 18% 30% 10%  ;
+    padding: 20px; display: flex;
+    justify-content: center;align-items: center;
+
+      background: linear-gradient(to bottom right, #616061, #000000);
+      position: relative;
+      z-index: 50;
+      &:hover{
+        >.icon{
+            >div{
+                >a{
+                    /* transform: translateX(230px); */
+                    transition: 1s;
+                }
+            }
+        }
+      }
+    >.icon{
+        
+        width: 100px;
+        height: 240px;
+        position: absolute;
+        z-index: 10;
+        
+        
+    >div{
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        /* gap: 15px; */
+        flex-direction: column;
+        z-index: -1;
+        
+        >a{
+        
+        /* width: 60px;
+        height: 60px; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        backdrop-filter: blur(100px);
+        border-radius: 50%;
+          transition: box-shadow 0.3s ease-in-out;
+          /* transition: transform 4s ; */
+          transition: 4s;
+         box-shadow: 
+        
+        0 0 5px #4d5353, 
+    
+        0 0 20px #677676, 
+    
+        0 0 40px #374343, 
+     
+        0 0 80px #383e3e; 
+        &:hover{
+             box-shadow: 
+        0 0 10px #b577b8, 
+        0 0 30px #5f096c, 
+        0 0 60px #9c33b6, 
+        0 0 120px #700e79; 
+        }
+        
+        >img{
+            width: 90%;
+            height: 90%;
+            padding: 8px;
+        }
+    }
+    }
+    }
+    >figure{
+        width: 90%;
+        height: 90%;
+        z-index: 999;
+        
+        
+            
+        >img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 72% 28% 62% 38% / 69% 59% 41% 31% ;
+              animation: smooth-asymmetric-morph-img 7s infinite linear;
+              z-index: 999;  
+        }
+    }
+}
+@keyframes smooth-asymmetric-morph-box {
+    0% {
+        border-radius: 62% 38% 53% 57% / 59% 18% 30% 10%; /* حالت A */
+    }
+    33% {
+        border-radius: 75% 25% 40% 60% / 35% 65% 65% 35%; /* حالت B */
+    }
+    66% {
+        border-radius: 45% 55% 70% 30% / 70% 40% 30% 60%; /* حالت C */
+    }
+    100% {
+        border-radius: 62% 38% 53% 57% / 59% 18% 30% 10%; /* بازگشت به حالت A */
+    }
+}
+
+@keyframes smooth-asymmetric-morph-img {
+    0% {
+        border-radius: 72% 28% 62% 38% / 69% 59% 41% 31%; /* حالت A تصویر */
+    }
+    33% {
+        border-radius: 50% 50% 40% 60% / 75% 25% 25% 75%; /* حالت B تصویر */
+    }
+    66% {
+        border-radius: 65% 35% 55% 45% / 30% 70% 40% 90%; /* حالت C تصویر */
+    }
+    100% {
+        border-radius: 72% 28% 62% 38% / 69% 59% 41% 31%; /* بازگشت به حالت A تصویر */
+    }
+}
+
+
+
+
